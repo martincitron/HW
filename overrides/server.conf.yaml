@@ -1,0 +1,31 @@
+Statistics:
+  # Application message flows will by default inherit Snapshot and Archive values set here
+  Snapshot:
+    publicationOn: 'active'   # choose 1 of : active|inactive, default inactive
+                                 # Also set Events.OperationalEvents.MQ|MQTT for outputFormat json,xml to be published to MQ/MQTT
+    accountingOrigin: 'basic'    # choose 1 of : none|basic
+    nodeDataLevel: 'advanced'       # choose 1 of : none|basic|advanced
+    outputFormat: 'json'   # comma separated list of : csv,bluemix,json,xml,usertrace
+    threadDataLevel: 'basic'     # choose 1 of : none|basic
+  Archive:
+    #archivalOn: 'inactive'      # choose 1 of : active|inactive, default inactive
+                                 # Also set Events.OperationalEvents.MQ|MQTT for outputFormat xml to be published to MQ/MQTT
+    #accountingOrigin: 'none'    # choose 1 of : none|basic
+    #majorInterval: 60           # Sets the interval in minutes at which archive statistics are published
+    #nodeDataLevel: 'none'       # choose 1 of : none|basic|advanced
+    #outputFormat: 'usertrace'   # comma separated list of : csv,xml,usertrace
+    #threadDataLevel: 'none'     # choose 1 of : none|basic
+  Resource:
+    outputFormat: ''            # comma separated list of : file,bluemix
+    reportingOn: false          # choose 1 of : true|false
+ResourceManagers:
+  HTTPConnector:
+    #ListenerPort: 0              # Set non-zero to set a specific port, defaults to 7800
+    #ListenerAddress: '0.0.0.0'   # Set the IP address for the listener to listen on. Default is to listen on all addresses
+    CORSEnabled: true           # Set the value to true to make the listener respond to valid HTTP CORS requests
+    #CORSAllowOrigins: '*'
+    #CORSAllowCredentials: false
+    #CORSExposeHeaders: 'Content-Type'
+    #CORSMaxAge: -1
+    #CORSAllowMethods: 'GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS'
+    #CORSAllowHeaders: 'Accept,Accept-Language,Content-Language,Content-Type'

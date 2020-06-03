@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "mv /tmp/src /home/${USER}/src/HW"
+
+mv /tmp/src /home/${USER}/src/HW
+
+echo "mqsipackagebar -w /home/${USER}/src -a /home/${USER}/src/HW.bar -k HW "
+
+mqsipackagebar -w /home/${USER}/src -a /home/${USER}/src/HW.bar -k HW 
+
+echo "mqsiapplybaroverrides -b /home/${USER}/src/HW.bar -p /home/${USER}/src/HW/overrides/HW_${ENV}.properties"
+
+mqsiapplybaroverrides -b /home/${USER}/src/HW.bar -p /home/${USER}/src/HW/overrides/HW_${ENV}.properties
+
+echo "mqsibar -w /home/${USER}/ace-server -a /home/${USER}/src/HW.bar -c"
+
+mqsibar -w /home/${USER}/ace-server -a/home/${USER}/src/HW.bar -c
+
+echo "cp -f /home/${USER}/src/HW/overrides /home/${USER}/ace-server"
+
+cp -r /home/${USER}/src/HW/overrides /home/${USER}/ace-server

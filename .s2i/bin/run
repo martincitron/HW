@@ -1,0 +1,3 @@
+#!/bin/bash
+
+IntegrationServer -w /home/${USER}/ace-server --console-log
