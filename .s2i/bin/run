@@ -1,3 +1,3 @@
 #!/bin/bash
 
-IntegrationServer -w /var/ace-server --console-log
+IntegrationServer -w /var/ace-server/runtime --console-log
