@@ -8,9 +8,9 @@ echo "mqsipackagebar -w /var/ace-server/src -a /var/ace-server/src/HW.bar -k HW"
 
 mqsipackagebar -w /var/ace-server/src -a /var/ace-server/src/HW.bar -k HW 
 
-echo "mqsiapplybaroverrides -b /var/ace-server/src/HW.bar -p /var/ace-server/src/HW/overrides/HW_${ENV}.properties"
+echo "mqsiapplybaroverride -b /var/ace-server/src/HW.bar -p /var/ace-server/src/HW/overrides/HW_${ENV}.properties"
 
-mqsiapplybaroverrides -b /var/ace-server/src/HW.bar -p /var/ace-server/src/HW/overrides/HW_${ENV}.properties
+mqsiapplybaroverride -b /var/ace-server/src/HW.bar -p /var/ace-server/src/HW/overrides/HW_${ENV}.properties
 
 echo "mqsibar -w /var/ace-server/runtime -a /var/ace-server/src/HW.bar -c"
 
