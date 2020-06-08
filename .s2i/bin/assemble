@@ -14,7 +14,7 @@ mqsiapplybaroverride -b /var/ace-server/src/HW.bar -p /var/ace-server/src/HW/ove
 
 echo "mqsibar -w /var/ace-server/runtime -a /var/ace-server/src/HW.bar -c"
 
-mqsibar -w /var/ace-server/runtime -a /var/ace-server/src/HW.bar -c
+mqsibar -w /var/ace-server/runtime -a /var/ace-server/src/HW.bar
 
 echo "cp -f /var/ace-server/src/HW/overrides /var/ace-server"
 
