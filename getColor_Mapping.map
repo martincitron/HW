@@ -21,7 +21,7 @@ You may need to use these as inputs to your mappings.</documentation>
             <input path="$ComIbmMessageAssembly_BLOB/Properties"/>
             <output path="$MessageAssembly1/Properties"/>
         </move>
-        <assign value="magenta">
+        <assign value="pink">
             <output path="$MessageAssembly1/JSON/spath('Data',2)/color"/>
         </assign>
     </mappingDeclaration>
