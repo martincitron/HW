@@ -18,4 +18,4 @@ mqsibar -w /var/ace-server/runtime -a /var/ace-server/src/HW.bar
 
 echo "cp -f /var/ace-server/src/HW/overrides /var/ace-server"
 
-cp -f /var/ace-server/src/HW/overrides /var/ace-server/runtime
+cp -rf /var/ace-server/src/HW/overrides /var/ace-server/runtime
