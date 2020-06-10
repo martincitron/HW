@@ -1,7 +1,7 @@
 Statistics:
   # Application message flows will by default inherit Snapshot and Archive values set here
   Snapshot:
-    publicationOn: 'active'   # choose 1 of : active|inactive, default inactive
+    publicationOn: 'inactive'   # choose 1 of : active|inactive, default inactive
                                  # Also set Events.OperationalEvents.MQ|MQTT for outputFormat json,xml to be published to MQ/MQTT
     accountingOrigin: 'basic'    # choose 1 of : none|basic
     nodeDataLevel: 'advanced'       # choose 1 of : none|basic|advanced
