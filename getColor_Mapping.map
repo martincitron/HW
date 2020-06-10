@@ -14,7 +14,7 @@
         <task type="info">
             <documentation description="The REST API input data of operation getColor.">This Task is provided to show the location of the REST API input data of operation getColor.
 The path and query parameters are provided under "Parameters".
-You may need to use these as inputs to your mappings.</documentation>
+You may need to use these as inputs to your mappings. </documentation>
             <input path="$ComIbmMessageAssembly_BLOB/LocalEnvironment/REST/Input"/>
         </task>
         <move>
