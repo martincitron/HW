@@ -30,6 +30,6 @@ ResourceManagers:
     #CORSAllowMethods: 'GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS'
     #CORSAllowHeaders: 'Accept,Accept-Language,Content-Language,Content-Type'
   ActivityLogManager:
-    activityLogEnabled: true
+    activityLogEnabled: false
     defaultLogSizePerThread: 1000
     minSeverityLevel: 'INFO'        # choose one of INFO|WARN|ERROR
