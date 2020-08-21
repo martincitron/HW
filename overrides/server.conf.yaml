@@ -16,8 +16,8 @@ Statistics:
     #outputFormat: 'usertrace'   # comma separated list of : csv,xml,usertrace
     #threadDataLevel: 'none'     # choose 1 of : none|basic
   Resource:
-    outputFormat: ''            # comma separated list of : file,bluemix
-    reportingOn: false          # choose 1 of : true|false
+    outputFormat: 'file'            # comma separated list of : file,bluemix
+    reportingOn: true          # choose 1 of : true|false
 ResourceManagers:
   HTTPConnector:
     #ListenerPort: 0              # Set non-zero to set a specific port, defaults to 7800
