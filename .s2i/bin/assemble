@@ -4,17 +4,25 @@ echo "mv /tmp/src /var/ace-server/src/HW"
 
 mv /tmp/src /var/ace-server/src/HW
 
-echo "mqsipackagebar -w /var/ace-server/src -a /var/ace-server/src/HW.bar -k HW"
+#echo "mqsipackagebar -w /var/ace-server/src -a /var/ace-server/src/HW.bar -k HW"
 
-mqsipackagebar -w /var/ace-server/src -a /var/ace-server/src/HW.bar -k HW 
+#mqsipackagebar -w /var/ace-server/src -a /var/ace-server/src/HW.bar -k HW 
 
-echo "mqsiapplybaroverride -b /var/ace-server/src/HW.bar -p /var/ace-server/src/HW/overrides/HW_DEV.properties"
+echo "ibmint package --input-path /var/ace-server/src --output-bar-file /var/ace-server/src/HW.bar --compile-maps-and-schemas --project HW --overrides-file /var/ace-server/src/HW/overrides/HW_DEV.properties"
 
-mqsiapplybaroverride -b /var/ace-server/src/HW.bar -p /var/ace-server/src/HW/overrides/HW_DEV.properties -k HW
+ibmint package --input-path /var/ace-server/src --output-bar-file /var/ace-server/src/HW.bar --compile-maps-and-schemas --project HW --overrides-file /var/ace-server/src/HW/overrides/HW_DEV.properties
 
-echo "mqsibar -w /var/ace-server/runtime -a /var/ace-server/src/HW.bar -c"
+#echo "mqsiapplybaroverride -b /var/ace-server/src/HW.bar -p /var/ace-server/src/HW/overrides/HW_DEV.properties"
 
-mqsibar -w /var/ace-server/runtime -a /var/ace-server/src/HW.bar
+#mqsiapplybaroverride -b /var/ace-server/src/HW.bar -p /var/ace-server/src/HW/overrides/HW_DEV.properties -k HW
+
+#echo "mqsibar -w /var/ace-server/runtime -a /var/ace-server/src/HW.bar -c"
+
+#mqsibar -w /var/ace-server/runtime -a /var/ace-server/src/HW.bar
+
+echo "ibmint deploy --input-bar-file /var/ace-server/src/HW.bar --output-work-directory /var/ace-server/runtime"
+
+ibmint deploy --input-bar-file /var/ace-server/src/HW.bar --output-work-directory /var/ace-server/runtime
 
 echo "cp -f /var/ace-server/src/HW/overrides /var/ace-server"
 
