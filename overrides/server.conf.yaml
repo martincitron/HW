@@ -1,3 +1,4 @@
+
 Statistics:
   # Application message flows will by default inherit Snapshot and Archive values set here
   Snapshot:
@@ -33,3 +34,7 @@ ResourceManagers:
     activityLogEnabled: false
     defaultLogSizePerThread: 1000
     minSeverityLevel: 'INFO'        # choose one of INFO|WARN|ERROR
+  ExceptionLog:
+    enabled: true                     # Enables logging of exceptions to <workdir>/config/common/log/integration_server.<name>.exceptionLog.txt
+    includeFlowThreadReporter: true   # Toggles whether exception in the exception log include a flow stack and history from the flow thread reporter
+    showNestedExceptionDetails: true  # Toggles whether nested exceptions are shown by default in the exception log
